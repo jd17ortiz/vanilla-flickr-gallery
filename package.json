@@ -1,0 +1,26 @@
+{
+  "name": "flickr_gallery_vanilla_javascript",
+  "version": "0.0.1",
+  "description": "Flickr Gallery Vanilla Javascript",
+  "author": "Jesus Ortiz <jd17ortiz@gmail.com>",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.7.12",
+    "gulp": "^3.9.0",
+    "gulp-autoprefixer": "^2.3.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-uglify": "^1.2.0"
+  },
+  "keywords": [
+    "javascript",
+    "flickr",
+    "gallery",
+    "sass"
+  ],
+  "scripts": {
+    "postinstall": "gulp;"
+  },
+  "license": "MIT"
+}

@@ -1,0 +1,340 @@
+$primary-color : #000;
+$secondary-color : #F9AA12;
+$tertiary-color : #520004;
+$content-size : 250px;
+$default-padding : 3rem;
+
+body{
+  background-color: $primary-color;
+  font-size: 62.5%;
+}
+.Layout{
+  background-color: $primary-color;
+  width : 100%;
+
+  &-header{
+    display: table;
+    width: 100%;
+
+    &-wrapTitle{
+      display: table-cell;
+      padding : $default-padding;
+      &-title{
+        color : $secondary-color;
+        font-size: 4rem;
+        margin : 0;
+      }
+    }
+
+    &-wrapSearcher{
+      display: table-cell;
+      padding : $default-padding;
+      text-align: right;
+      vertical-align: middle;
+      position : relative;
+    }
+  }
+
+  &-box{
+    font-size : 1.2rem;
+    height: 2.5rem;
+    padding : 0.5rem;
+    &--large{
+      width : 100%;
+      max-width : 450px;
+    }
+    &--icon{
+      font-size: 2rem;
+      vertical-align: middle;
+      color: #520004;
+      position: absolute;
+      right: 58px;
+      top: 50%;
+      margin-top: -17px;
+    }
+  }
+
+  &-socialMediaBox{
+    position : absolute;
+    right: -100px;
+    bottom: 0px;
+    &--twitter{
+      color : #1dcaff !important;
+    }
+    &--facebook{
+      color : #3b5998 !important;
+    }
+    &--googleplus{
+      color : #dd4b39 !important;
+    }
+
+    &-socialData{
+      display: none;
+      position: absolute;
+      right: 0rem;
+      top: -162px;
+      width: 332px;
+      background-color : $tertiary-color;
+      &::after{
+        content: '';
+        position: absolute;
+        right: 28px;
+        bottom: -14px;
+        border-right: 14px solid transparent;
+        border-top: 14px solid $tertiary-color;
+        border-left: 14px solid transparent;
+      }
+      &-wrap{
+        display: table;
+        width : 100%;
+        &-column{
+          display: table-cell;
+          vertical-align : top;
+          width : 90px;
+          height : 108px;
+          padding : 1rem;
+
+          &-socialNetworkNumbers{
+            height: 70px;
+            background-color: #FFF;
+            position : relative;
+
+            &::after{
+              content: '';
+              position: absolute;
+              right: 50%;
+              margin-right : -8px;
+              bottom: -8px;
+              border-right: 8px solid transparent;
+              border-top: 8px solid #FFF;
+              border-left: 8px solid transparent;
+            }
+
+            &-shareButton{
+              background-color : #eee;
+              width: 100%;
+              margin-top: 1rem;
+              border-radius: 2px;
+              font-size: 1rem;
+              color : $primary-color;
+              span{
+                float: left;
+              }
+            }
+
+            &-icon{
+              margin : 0 0.5rem 0 0;
+            }
+
+            span{
+              line-height: 70px;
+              color: $primary-color;
+              font-size : 1.2rem;
+            }
+
+
+
+          }
+        }
+      }
+    }
+    &-socialButton{
+      float : right;
+      font-size : 1.2rem;
+      color : $secondary-color;
+      padding : 1rem;
+      background-color : $tertiary-color;
+      text-decoration: none;
+      text-transform: uppercase;
+      z-index: 1;
+      position: relative;
+    }
+  }
+
+  &-footer{
+    height: 250px;
+    background-color : #1D1D1B;
+    margin-top: 5rem;
+  }
+}
+
+.FlickrGallery{
+
+  &-content{
+    min-height: $content-size;
+    position: relative;
+
+    &-controlsMainPictureRight, &-controlsMainPictureLeft{
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 74px;
+      height: 74px;
+      border-radius: 50%;
+      background-color: rgba(0,0,0,0.5);
+      text-align: center;
+      display: table;
+      a{
+        color : #FFF;
+        font-size: 3rem;
+        display: table-cell;
+        vertical-align: middle;
+        &:hover{
+          color : $secondary-color;
+        }
+      }
+    }
+
+    &-separator{
+      margin: 0 7rem;
+      border-top: 0.2rem solid #FFF;
+    }
+    &-controlsMainPictureRight{
+      right : 3rem;
+    }
+
+    &-controlsMainPictureLeft{
+      left : 3rem;
+    }
+
+    &--spacing{
+      padding: 5rem 3rem 0rem;
+      text-align: center;
+    }
+
+    &-pictureWrap{
+      margin-top : -$content-size;
+      width : 100%;
+      box-sizing: border-box;
+      padding : 0 7rem;
+      text-align: center;
+
+      &-messageNotFound{
+        font-size : 2rem;
+        color : #FFF;
+      }
+      &-figure{
+        margin : 0;
+        text-align : center;
+        &-picture{
+          max-width: 100%;
+          max-height : $content-size*2;
+          vertical-align: middle;
+        }
+        &-legend{
+          color : #FFF;
+          font-size : 1.4rem;
+          padding: 1rem 0.5rem 0;
+          text-align: center;
+          min-height: 55px;
+          margin: 0 100px;
+          position: relative;
+        }
+      }
+    }
+
+    &-thumbnailWrap{
+      padding: 0;
+      padding-left: 3rem;
+      display: inline-block;
+      list-style: none;
+      max-width: 990px;
+      text-align: left;
+
+      &-thumbnail{
+        display: inline-block;
+        cursor : pointer;
+        height : 150px;
+        width : 150px;
+        margin : 0 3rem 2rem 0;
+        font-size : 0;
+        vertical-align : top;
+        text-align: center;
+
+
+        &-thumbnailPicture{
+          max-width: 100%;
+          max-height : 100%;
+        }
+      }
+    }
+
+    &-pagination{
+      padding : 0 4rem;
+      display: inline-block;
+      width: 100%;
+      box-sizing: border-box;
+      color : #FFF;
+      font-size: 1rem;
+
+      &-paginationContainer{
+        display: inline-block;
+        width : 100%;
+
+        &-paginationWrap{
+          float: right;
+          &-controlsWrap{
+            display : inline-block;
+            &-goFirstPage, &-goPreviousPage, &-goLastPage, &-goNextPage{
+              color : #FFF;
+              margin : 0 0 0 0.5rem;
+              text-decoration: none;
+            }
+          }
+        }
+
+        &-numbersWrap{
+          display : inline-block;
+          list-style: none;
+          padding : 0;
+          margin : 0 0 0 0.5rem;
+
+          &-page{
+            display: inline-block;
+            font-size : 0;
+            margin : 0.5rem;
+
+            &-pageNumber{
+              font-size: 1rem;
+              color : #FFF;
+              text-decoration: none;
+              &:hover{
+                text-decoration: underline;
+                color : $secondary-color;
+              }
+            }
+          }
+        }
+      }
+    }
+
+
+    &--highlight{
+      background-color : $tertiary-color;
+    }
+  }
+}
+
+
+// Media Queries
+
+@media (max-width: 1134px) {
+    .FlickrGallery-content-thumbnailWrap {
+      max-width: 792px;
+    }
+}
+@media (max-width: 934px) {
+  .FlickrGallery-content-thumbnailWrap {
+    max-width: 594px;
+  }
+}
+@media (max-width: 738px) {
+  .FlickrGallery-content-thumbnailWrap {
+    max-width: 396px;
+  }
+}
+@media (max-width: 540px) {
+  .FlickrGallery-content-thumbnailWrap {
+    max-width: 198px;
+  }
+}

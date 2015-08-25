@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="flickrGallery">
+<head>
+  <meta charset="UTF-8">
+  <title>Vanilla Javascript Flickr Gallery</title>
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/normalize/3.0.3/normalize.min.css" />
+  <link rel="stylesheet" href="dist/css/app.css">
+  <link rel="stylesheet" href="//code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+</head>
+<body>
+
+<section class="Layout">
+  <header class="Layout-header">
+    <div class="Layout-header-wrapTitle">
+      <h1 class="Layout-header-wrapTitle-title">Photos</h1>
+    </div>
+    <div class="Layout-header-wrapSearcher">
+      <input type="text" placeholder="Search by title" id="search-pictures" class="Layout-box Layout-box--large">
+      <span class="ion-android-search Layout-box--icon"></span>
+    </div>
+  </header>
+
+  <section class="FlickrGallery" id="gallery1">
+    <div class="FlickrGallery-content FlickrGallery-content--highlight"></div>
+    <div class="FlickrGallery-content FlickrGallery-content-mainPicture">
+      <div class="FlickrGallery-content-controlsMainPictureLeft">
+        <a href="#" class="ion-chevron-left"></a>
+      </div>
+      <div class="FlickrGallery-content-pictureWrap">
+        <figure class="FlickrGallery-content-pictureWrap-figure">
+        </figure>
+      </div>
+      <div class="FlickrGallery-content-controlsMainPictureRight">
+        <a href="#" class="ion-chevron-right"></a>
+      </div>
+
+    </div>
+    <hr class="FlickrGallery-content-separator"/>
+    <div class="FlickrGallery-content  FlickrGallery-content--spacing">
+      <ul class="FlickrGallery-content-thumbnailWrap">
+      </ul>
+      <div class="FlickrGallery-content-pagination">
+        <div class="FlickrGallery-content-pagination-paginationContainer">
+          <div class="FlickrGallery-content-pagination-paginationContainer-paginationWrap">
+            <div class="FlickrGallery-content-pagination-paginationContainer-paginationWrap-controlsWrap">
+              <a href="#" class="FlickrGallery-content-pagination-paginationContainer-paginationWrap-controlsWrap-goFirstPage"> << </a>
+              <a href="#" class="FlickrGallery-content-pagination-paginationContainer-paginationWrap-controlsWrap-goPreviousPage"> < </a>
+            </div>
+            <ul class="FlickrGallery-content-pagination-paginationContainer-numbersWrap">
+            </ul>
+            <div class="FlickrGallery-content-pagination-paginationContainer-paginationWrap-controlsWrap">
+              <a href="#" class="FlickrGallery-content-pagination-paginationContainer-paginationWrap-controlsWrap-goLastPage"> > </a>
+              <a href="#" class="FlickrGallery-content-pagination-paginationContainer-paginationWrap-controlsWrap-goNextPage"> >> </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr class="FlickrGallery-content-separator"/>
+  </section>
+
+
+
+  <footer class="Layout-footer">
+
+  </footer>
+
+</section>
+
+
+
+<script src="dist/js/all.js"></script>
+</body>
+</html>
